@@ -42,7 +42,7 @@ def create_task():
         "updated_at": datetime.now().isoformat(),
     }
 
-    # BUG: next_id is never incremented — all tasks get id=1
+    next_id += 1
     tasks.append(task)
     return jsonify(task), 201
 
