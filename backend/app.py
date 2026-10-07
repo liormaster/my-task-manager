@@ -43,7 +43,7 @@ def create_task():
     }
 
     tasks.append(task)
-    next_id += 1
+    next_id += 1  # Fix: increment next_id for unique task IDs
     return jsonify(task), 201
 
 
